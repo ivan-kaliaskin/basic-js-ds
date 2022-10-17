@@ -12,22 +12,57 @@ const { NotImplementedError } = require('../extensions/index.js');
  * stack.pop(); // undefined
  *
  */
+
+var items = []
+
 class Stack {
-  push(/* element */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  push(element) {
+    items.push(element)
   }
 
   pop() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    return items.pop()
   }
 
   peek() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    return items[items.length - 1]
   }
 }
+
+// function Stack(){
+
+//   var items = []; // Используется для сохранения элементов в стеке
+
+// this.push = function (element) {
+//  items.push(element);
+// }
+
+// this.pop = function () {
+//  return items.pop();
+// }
+
+// this.peek = function () {
+//  return items[items.length-1];
+// }
+
+// this.isEmpty = function () {
+//  return items.length == 0;
+// }
+
+// this.size = function () {
+//  return items.length;
+// }
+
+// this.clear = function () {
+//  items = [];
+// }
+
+// this.print = function () {
+//  console.log(items.toString());
+// }
+// }
+
+
 
 module.exports = {
   Stack
